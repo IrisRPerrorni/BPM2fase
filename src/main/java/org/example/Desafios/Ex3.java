@@ -33,16 +33,24 @@ public class Ex3 {
         chamada();
         int num = entrada.nextInt();
         for (int i = 0 ; i< num ; i++){
-            System.out.println(calculadoraFibonaci(i) + " ");
+            System.out.println(fibonacii(i) + " ");
         }
+
+        System.out.println("Fib = " + calculadoraFibonacii(num));
 
 
     }
-    public static int calculadoraFibonaci(int num){
+    public static int fibonacii(int num){
         if (num<2){
             return 1;
         }
-        return calculadoraFibonaci(num-1) + calculadoraFibonaci(num-2);
+        return fibonacii(num-1) +fibonacii(num-2);
+    }
+    public static int calculadoraFibonacii(int num){
+        if (num<2){
+            return num;
+        }
+        return calculadoraFibonacii(num-1) +calculadoraFibonacii(num-2);
     }
     public static void chamada(){
         System.out.println("Digite o numero que deseja calcular o seu valor do Fibonaci: ");
